@@ -41,7 +41,7 @@ const Navbar = () => {
             </svg>
           </button>
 
-          <Link href='/'>
+          <Link href="/">
             <Image src={logo} height={40} width={40} alt="Tiles"></Image>
           </Link>
         </div>
@@ -56,10 +56,16 @@ const Navbar = () => {
             <Link href="/my-profile">My Profile</Link>
           </li>
         </ul>
+
         <div className="flex gap-4">
-          <button className="btn">Sign Up</button>
-          <button className="btn">Login</button>
+          <Link href='/signup'>
+            <button className="btn">Sign Up</button>
+          </Link>
+          <Link href='/login'>
+            <button className="btn">Login</button>
+          </Link>
         </div>
+        
       </header>
       {isMenuOpen && (
         <div className="flex justify-between items-center border-t border-separator md:hidden p-4">
@@ -80,7 +86,6 @@ const Navbar = () => {
               </Link>
             </li>
           </ul>
-          
         </div>
       )}
     </nav>
