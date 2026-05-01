@@ -3,7 +3,7 @@ import React from 'react';
 import ShowTiles from '../components/ShowTiles';
 
 const AllTiles =async () => {
-
+     
   const AllData = await getData();
     // console.log(AllData);
   return (
