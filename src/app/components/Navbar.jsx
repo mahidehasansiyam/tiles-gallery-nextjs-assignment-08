@@ -69,7 +69,7 @@ const Navbar = () => {
         </ul>
 
         {session ? (
-          <div className="flex gap-4 items-center">
+          <div className="flex gap-1 md:gap-4 items-center">
             <div>{session?.user.name}</div>
             <div>
               <Image
