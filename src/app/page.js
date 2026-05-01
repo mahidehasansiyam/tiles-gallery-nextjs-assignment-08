@@ -1,5 +1,5 @@
 
-import { getData } from "@/lib/DataFetch";
+// import { getData } from "@/lib/DataFetch";
 import Hero from "./components/Hero";
 import Marquee from "./components/Marquee";
 import ShowTiles from "./components/ShowTiles";
@@ -7,8 +7,8 @@ import Link from "next/link";
 
 export default async function Home() {
  
-  const AllData = await getData();
-  // console.log(AllData);
+  // const AllData = await getData();
+  // // console.log(AllData);
   
 
   return (
@@ -18,7 +18,7 @@ export default async function Home() {
 
       {/* Featured Tiles: */}
 
-      <div>
+      {/* <div>
         <h2 className="font-bold text-2xl">Featured Tiles:</h2>
         <div className="grid grid-cols-4 gap-4">
           {AllData.slice(0, 8).map(tiles => {
@@ -34,7 +34,7 @@ export default async function Home() {
             <button className="btn btn-primary px-6">Show All</button>
           </Link>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
