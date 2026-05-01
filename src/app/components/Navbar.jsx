@@ -82,17 +82,17 @@ const Navbar = () => {
               ></Image>
             </div>
 
-            <button onClick={handlesignout} className="btn">
+            <button onClick={handlesignout} className="btn md:btn-sm">
               Sign Out
             </button>
           </div>
         ) : (
           <div className="flex gap-4">
             <Link href="/signup">
-              <button className="btn">Sign Up</button>
+              <button className="btn md:btn-sm">Sign Up</button>
             </Link>
             <Link href="/login">
-              <button className="btn">Login</button>
+              <button className="btn md:btn-sm ">Login</button>
             </Link>
           </div>
         )}
