@@ -11,7 +11,7 @@ const MyProfile = () => {
   
 
   return (
-    <div className="my-10 flex justify-center items-center text-center">
+    <div className=" my-20 flex justify-center items-center text-center">
       <div className="shadow-2xl rounded-2xl  p-8">
         <div className="flex justify-center items-center mb-3">
           <Image
