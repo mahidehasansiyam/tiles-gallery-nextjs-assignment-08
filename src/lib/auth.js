@@ -15,12 +15,11 @@ export const auth = betterAuth({
   socialProviders: {
     google: {
       prompt: 'select_account',
-      clientId: process.env.GOOGLE_CLIENT_ID,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+      clientId:'770701869220-3dh9i5f1dr11ti87vfkpc3rcmahrvi6f.apps.googleusercontent.com',
+      clientSecret:"GOCSPX - _Xsm3xo0lHSYu2IffBH - GAEBSZSm",
     },
   },
 
-  
   database: mongodbAdapter(db, {
     client,
   }),

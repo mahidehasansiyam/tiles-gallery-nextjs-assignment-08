@@ -7,7 +7,7 @@ export const authClient = createAuthClient({
 export const { signIn, signUp, signOut, useSession } = createAuthClient();
 
 
-console.log('AUTH CHECK:', {
-  id: process.env.GOOGLE_CLIENT_ID,
-  secret: process.env.GOOGLE_CLIENT_SECRET,
-});
+// console.log('AUTH CHECK:', {
+//   id: process.env.GOOGLE_CLIENT_ID,
+//   secret: process.env.GOOGLE_CLIENT_SECRET,
+// });
