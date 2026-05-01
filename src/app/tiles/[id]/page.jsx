@@ -14,7 +14,7 @@ const TilesDetails =async ({params}) => {
 
 
   return (
-    <div className="min-h-screen bg-gray-100 p-6 md:p-12">
+    <div className="min-h-screen bg-gray-100 p-2 md:p-12">
       <div className="grid md:grid-cols-2 gap-10 bg-white p-6 rounded-2xl shadow-lg">
         {/* Image */}
         <div className="overflow-hidden rounded-xl">

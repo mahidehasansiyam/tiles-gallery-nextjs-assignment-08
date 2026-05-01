@@ -9,7 +9,7 @@ const AllTiles =async () => {
   return (
     <div className="max-w-7xl mx-auto" >
       <h2 className="font-bold text-2xl">All Tiles:</h2>
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {AllData.map(tiles => {
           return (
             <div key={tiles.id}>

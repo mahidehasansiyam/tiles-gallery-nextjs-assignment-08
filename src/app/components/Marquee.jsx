@@ -2,7 +2,7 @@ import Marquee from 'react-fast-marquee';
 
 const Marque = () => {
   return (
-    <div className="bg-slate-100 py-3 my-2 px-10 flex ">
+    <div className="bg-slate-100 py-3 my-2 md:px-10 px-3  flex ">
       <button className="btn bg-slate-100 border-none ">
         New Arrivals:
       </button>
