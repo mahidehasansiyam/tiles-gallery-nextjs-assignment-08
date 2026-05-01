@@ -11,12 +11,15 @@ import {
   Label,
   TextField,
 } from '@heroui/react';
+import { useRouter } from 'next/navigation';
 
 
 import { useForm } from 'react-hook-form';
 import { BsGoogle } from 'react-icons/bs';
 
 const SignupPage = () => {
+
+  const router = useRouter()
   const {
     register,
     handleSubmit,
@@ -32,9 +35,13 @@ const SignupPage = () => {
       email: data.email,
       password: data.password, 
       image:data.image,
-      callbackURL: '/',
+      
     });
 
+    if (!error) {
+      router.push('/')
+    }
+    
     console.log("data",data,"res",res ,"error",error);
   };
 

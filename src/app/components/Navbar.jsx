@@ -3,10 +3,19 @@ import { useState } from 'react';
 import { Link, Button } from '@heroui/react';
 import logo from '@/assets/logo.png'
 import Image from 'next/image';
+import { authClient } from '@/lib/auth-client';
 
 const Navbar = () => {
 
-   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { data: session } = authClient.useSession();
+  // console.log(session);
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+   
+  const handlesignout =async () => {
+    await authClient.signOut();
+  }
+
   return (
     <nav className="sticky top-0 z-40 w-full border-b border-separator bg-background/10 backdrop-blur-sm">
       <header className="flex h-16 items-center justify-between px-6">
@@ -57,15 +66,33 @@ const Navbar = () => {
           </li>
         </ul>
 
-        <div className="flex gap-4">
-          <Link href='/signup'>
-            <button className="btn">Sign Up</button>
-          </Link>
-          <Link href='/login'>
-            <button className="btn">Login</button>
-          </Link>
-        </div>
-        
+        {session ? (
+          <div className="flex gap-4 items-center">
+            <div>{session?.user.name}</div>
+            <div>
+              <Image
+                src={session?.user.image}
+                height={30}
+                width={30}
+                alt='Logo'
+                className='rounded-full ring-2 ring-green-500'
+                referrerPolicy='no-referrer'
+              ></Image>
+            </div>
+            
+              <button onClick={handlesignout} className="btn">Sign Out</button>
+            
+          </div>
+        ) : (
+          <div className="flex gap-4">
+            <Link href="/signup">
+              <button className="btn">Sign Up</button>
+            </Link>
+            <Link href="/login">
+              <button className="btn">Login</button>
+            </Link>
+          </div>
+        )}
       </header>
       {isMenuOpen && (
         <div className="flex justify-between items-center border-t border-separator md:hidden p-4">
