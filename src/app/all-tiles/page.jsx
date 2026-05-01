@@ -25,3 +25,4 @@ const AllTiles =async () => {
 
 
 export default AllTiles;
+
