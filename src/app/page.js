@@ -9,7 +9,7 @@ export default async function Home() {
  
   const AllData = await getData();
   // console.log(AllData);
-  // tiles-gallery-nextjs-assignment-08
+  
 
   return (
     <div className="max-w-7xl mx-auto">
