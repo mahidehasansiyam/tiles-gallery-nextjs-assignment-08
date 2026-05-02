@@ -12,10 +12,9 @@ import {
   TextField,
 } from '@heroui/react';
 import { useRouter } from 'next/navigation';
-
-
 import { useForm } from 'react-hook-form';
 import { BsGoogle } from 'react-icons/bs';
+import { toast } from 'react-toastify';
 
 const SignupPage = () => {
 
