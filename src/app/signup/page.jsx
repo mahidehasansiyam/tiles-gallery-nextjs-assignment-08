@@ -38,10 +38,14 @@ const SignupPage = () => {
     });
 
     if (!error) {
+      alert("Signup successful.")
       router.push('/')
     }
+    if (error) {
+      alert(error.message)
+    }
     
-    console.log("data",data, "\n", "res",res , "\n", "error",error , "\n", "watch", watch() , "\n", "errors", errors);
+    console.log("data",data, "\n", "res",res , "\n", "error",error , );
   };
 
   const handlegooglesignin =async () => {

@@ -29,10 +29,10 @@ const LoginPage = () => {
       email: data.email,
       password: data.password,
 
-      callbackURL: '/',
+      // callbackURL: '/',
     });
 
-    console.log('data', data, 'res', res, 'error', error);
+    console.log('data', data, '\n', 'res', res, '\n', 'error', error);
   };
 
   const handlegooglesignin =async () => {
