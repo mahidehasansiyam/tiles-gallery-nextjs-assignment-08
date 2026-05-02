@@ -35,14 +35,13 @@ const SignupPage = () => {
       email: data.email,
       password: data.password, 
       image:data.image,
-      
     });
 
     if (!error) {
       router.push('/')
     }
     
-    console.log("data",data,"res",res ,"error",error);
+    console.log("data",data, "\n", "res",res , "\n", "error",error , "\n", "watch", watch() , "\n", "errors", errors);
   };
 
   const handlegooglesignin =async () => {
