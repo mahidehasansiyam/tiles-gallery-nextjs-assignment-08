@@ -29,8 +29,15 @@ const LoginPage = () => {
       email: data.email,
       password: data.password,
 
-      // callbackURL: '/',
+      callbackURL: '/',
     });
+
+    if (!error) {
+      alert("Login successful.")
+    }
+    if (error) {
+      alert(error.message)
+    }
 
     console.log('data', data, '\n', 'res', res, '\n', 'error', error);
   };
