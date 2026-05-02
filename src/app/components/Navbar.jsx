@@ -75,7 +75,7 @@ const Navbar = () => {
               <Image
                 src={session?.user.image}
                 
-                
+                fill
                 alt="Logo"
                 className="rounded-full ring-2 ring-green-500"
                 referrerPolicy="no-referrer"
