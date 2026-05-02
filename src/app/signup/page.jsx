@@ -38,13 +38,12 @@ const SignupPage = () => {
     });
 
     if (!error) {
-      alert("Signup successful.")
+      toast.success("Signup successful.");
       router.push('/')
     }
     if (error) {
-      alert(error.message)
+      toast.error(error.message);
     }
-    
     console.log("data",data, "\n", "res",res , "\n", "error",error , );
   };
 

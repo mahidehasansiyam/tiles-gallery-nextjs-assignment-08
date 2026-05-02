@@ -15,6 +15,7 @@ import {
 import { useForm } from 'react-hook-form';
 import { BsGoogle, BsGooglePlay } from 'react-icons/bs';
 import { CgGoogle } from 'react-icons/cg';
+import { toast } from 'react-toastify';
 
 const LoginPage = () => {
   const {
@@ -23,7 +24,7 @@ const LoginPage = () => {
     watch,
     formState: { errors },
   } = useForm();
-
+   
   const onSubmit = async data => {
     const { data: res, error } = await authClient.signIn.email({
       email: data.email,
@@ -33,10 +34,10 @@ const LoginPage = () => {
     });
 
     if (!error) {
-      alert("Login successful.")
+      toast.success("Login successful.");
     }
     if (error) {
-      alert(error.message)
+      toast.error(error.message);
     }
 
     console.log('data', data, '\n', 'res', res, '\n', 'error', error);

@@ -4,11 +4,13 @@ import Hero from "./components/Hero";
 import Marquee from "./components/Marquee";
 import ShowTiles from "./components/ShowTiles";
 import Link from "next/link";
+import { toast } from "react-toastify";
 
 export default async function Home() {
  
   const AllData = await getData();
   // console.log(AllData);
+ 
   
 
   return (
@@ -28,6 +30,9 @@ export default async function Home() {
               </div>
             );
           })}
+        </div>
+        <div>
+          
         </div>
         <div className="flex justify-center items-center m-4">
           <Link href="/all-tiles">
