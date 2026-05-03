@@ -19,7 +19,7 @@ const MyProfile = () => {
             height={100}
             width={100}
             alt="Logo"
-            className="rounded-full ring-4 ring-green-500"
+            className="h-24 w-24 rounded-full ring-4 ring-green-500"
           ></Image>
         </div>
         <h2 className="font-bold">{session?.user.name}</h2>
