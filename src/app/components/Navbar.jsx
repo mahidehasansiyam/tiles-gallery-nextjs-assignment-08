@@ -5,6 +5,7 @@ import logo from '@/assets/logo.png'
 import Image from 'next/image';
 import { authClient } from '@/lib/auth-client';
 
+
 const Navbar = () => {
 
   const { data: session } = authClient.useSession();
@@ -121,6 +122,7 @@ const Navbar = () => {
           </ul>
         </div>
       )}
+      
     </nav>
   );
 };

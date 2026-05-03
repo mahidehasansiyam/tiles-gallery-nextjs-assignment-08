@@ -1,6 +1,7 @@
 import { getData } from '@/lib/DataFetch';
 import React from 'react';
 import ShowTiles from '../components/ShowTiles';
+import SearchTiles from '../components/SearchTiles';
 
 const AllTiles =async () => {
      
@@ -8,6 +9,7 @@ const AllTiles =async () => {
     // console.log(AllData);
   return (
     <div className="max-w-7xl mx-auto" >
+      <SearchTiles></SearchTiles>
       <h2 className="font-bold text-2xl">All Tiles:</h2>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {AllData.map(tiles => {
