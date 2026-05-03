@@ -2,9 +2,10 @@
 
 import { useState } from 'react';
 import ShowTiles from './ShowTiles';
+import { BiSearch } from 'react-icons/bi';
 
 const SearchTiles = () => {
-  const [searchText, setSearchText] = useState('');
+  const [searchText, setSearchText] = useState('Search titles ...');
   const data = [
     {
       id: 'tile_001',
@@ -263,14 +264,17 @@ const SearchTiles = () => {
   return (
     <div>
       {' '}
-      <div className='flex justify-center items-center m-4'>
+      <div className="flex justify-center items-center m-4 relative">
         <input
           type="text"
           placeholder="Search tiles..."
           value={searchText}
           onChange={e => setSearchText(e.target.value)}
-          className="input  w-full max-w-xs"
+          className="input w-full max-w-xs"
         />
+        <div className='absolute right-[10%] md:right-[32%] lg:right-[38%]'>
+          <BiSearch></BiSearch>
+        </div>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {filteredData.map(tiles => {
