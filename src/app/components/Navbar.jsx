@@ -79,7 +79,7 @@ const Navbar = () => {
                 height={30}
                 width={30}
                 alt="Logo"
-                className="rounded-full ring-2 ring-green-500"
+                className="w-8 h-8 rounded-full ring-2 ring-green-500"
                 referrerPolicy="no-referrer"
               ></Image>
             </div>
