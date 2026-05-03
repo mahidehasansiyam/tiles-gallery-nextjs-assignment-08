@@ -5,6 +5,7 @@ import Marquee from "./components/Marquee";
 import ShowTiles from "./components/ShowTiles";
 import Link from "next/link";
 import SearchTiles from "./components/SearchTiles";
+import Animation from "./components/Animation";
 
 
 
@@ -23,8 +24,7 @@ export default async function Home() {
       {/* Featured Tiles: */}
 
       <div>
-        
-          {/* <SearchTiles></SearchTiles> */}
+        {/* <SearchTiles></SearchTiles> */}
         <h2 className="font-bold text-2xl">Featured Tiles:</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {AllData.slice(0, 8).map(tiles => {
@@ -40,6 +40,9 @@ export default async function Home() {
           <Link href="/all-tiles">
             <button className="btn btn-primary px-6">Show All</button>
           </Link>
+        </div>
+        <div>
+          <Animation></Animation>
         </div>
       </div>
     </div>
