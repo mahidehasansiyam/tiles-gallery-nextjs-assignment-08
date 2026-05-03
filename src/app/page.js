@@ -4,7 +4,6 @@ import Hero from "./components/Hero";
 import Marquee from "./components/Marquee";
 import ShowTiles from "./components/ShowTiles";
 import Link from "next/link";
-import SearchTiles from "./components/SearchTiles";
 import Animation from "./components/Animation";
 
 
