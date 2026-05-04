@@ -19,7 +19,7 @@ export default async function Home() {
     <div className="max-w-7xl mx-auto">
       <Hero></Hero>
       <Marquee></Marquee>
-             <SearchTiles></SearchTiles>
+      
       {/* Featured Tiles: */}
      
       <div>
