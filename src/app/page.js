@@ -5,23 +5,23 @@ import Marquee from "./components/Marquee";
 import ShowTiles from "./components/ShowTiles";
 import Link from "next/link";
 import Animation from "./components/Animation";
-
+import SearchTiles from "./components/SearchTiles";
 
 
 export default async function Home() {
+
+  
  
   const AllData = await getData();
   // console.log(AllData);
  
-  
-
   return (
     <div className="max-w-7xl mx-auto">
       <Hero></Hero>
       <Marquee></Marquee>
-
+             <SearchTiles></SearchTiles>
       {/* Featured Tiles: */}
-
+     
       <div>
         {/* <SearchTiles></SearchTiles> */}
         <h2 className="font-bold text-2xl">Featured Tiles:</h2>
